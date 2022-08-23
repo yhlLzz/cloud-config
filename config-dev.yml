@@ -1,2 +1,4 @@
 config:
   info: myinfo
+server:
+  port: 3355
