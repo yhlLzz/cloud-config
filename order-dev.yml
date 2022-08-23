@@ -1,0 +1,23 @@
+server:
+  port: 80
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/
+  instance:
+    instance-id: cloud-order-openfegin-consumer80
+spring:
+  application:
+    name: cloud-order-consumer
+logging:
+  level:
+    com.hailong.service: debug
+# 配置超时时间
+feign:
+  client:
+    config:
+      default:
+        # 连接超时时间
+        coconnectTimeout: 2000
+        # 读取数据的超时时间
+        readTimeout: 2000
